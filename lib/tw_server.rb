@@ -6,7 +6,7 @@ class TwServer
 
 	def run
 		@logger.both "Running TweetStream client instance for #{@accounts.size} accounts"
-		Ts.follow(@accounts) do |status|
+		Ts.client.follow(*@accounts) do |status|
 		  receive_status(status)
 		end
 	end
