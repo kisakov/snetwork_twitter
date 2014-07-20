@@ -13,7 +13,6 @@ gem 'tweetstream'
 gem 'logger'
 
 group :development do
-  gem 'spring'
   gem 'pry-rails'
 end
 

@@ -17,7 +17,7 @@ private
 		@logger.file "========================"
 		@logger.both "Adding tweet to db from user_id: #{status.user.id}"
 		@logger.out "#{status.text}"
-
+		Tweet.add(status)
 		@logger.both "Tweet added"
 		@logger.file "========================"
 	end
