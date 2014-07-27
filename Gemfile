@@ -13,6 +13,7 @@ gem 'sidekiq'
 gem 'sidetiq'
 gem 'logger'
 gem 'foreman'
+gem 'slim-rails'
 
 group :development do
   gem 'pry-rails'

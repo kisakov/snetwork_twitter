@@ -1,6 +1,10 @@
 class TwitterAccount < ActiveRecord::Base
   has_many :tweets
 
+  validates_uniqueness_of :name
+
+  def to_s; name end
+
   def fetch_tweets
     options = {count: 200, exclude_replies: true}
     if last_tweet_id = tweets.maximum(:twitter_id)
@@ -11,8 +15,8 @@ class TwitterAccount < ActiveRecord::Base
 
   def self.create_account(user_name)
     user = Tw.client.user(user_name)
-    TwitterAccount.find_or_create_by(name: user.name) do |account|
-      account.screen_name       = user.screen_name
+    TwitterAccount.find_or_create_by(screen_name: user_name) do |account|
+      account.name              = user.name
       account.description       = user.description
       account.profile_image_url = user.profile_image_url.to_s
       account.followers_count   = user.followers_count

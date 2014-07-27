@@ -1,0 +1,8 @@
+h3 Tweets for #{@twitter_account}
+
+- if @twitter_account
+  table
+    tr
+      th text
+      th retweet_count
+    = render partial: 'tweet', collection: @tweets

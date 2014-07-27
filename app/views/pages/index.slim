@@ -1,0 +1,9 @@
+h3 Add Twitter Account
+= form_for @twitter_account, url: add_account_path do |f|
+  = f.text_field :name, placeholder: 'twitter nickname'
+  = f.submit
+
+h3 Twitter Accounts
+ol
+  - @twitter_accounts.each do |twitter_account|
+    li = link_to twitter_account, tweets_path(name: twitter_account.screen_name)
