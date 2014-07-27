@@ -15,8 +15,16 @@ gem 'logger'
 gem 'foreman'
 gem 'slim-rails'
 
-group :development do
+group :development, :test do
   gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
 end
 
 
