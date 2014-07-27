@@ -2,6 +2,9 @@ require 'sidekiq/api'
 
 class TwitterAccountChecker
   include Sidekiq::Worker
+  include Sidetiq::Schedulable
+
+  recurrence { minutely }
 
   def perform
     TwitterAccount.pluck(:id).each do |twitter_account_id|

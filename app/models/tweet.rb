@@ -1,6 +1,8 @@
 class Tweet < ActiveRecord::Base
   belongs_to :twitter_account
 
+  validates_uniqueness_of :twitter_id
+
   def self.add(status)
     account = TwitterAccount.find_by(twitter_user_id: status.user.id)
     account.tweets.create(

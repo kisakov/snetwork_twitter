@@ -2,8 +2,11 @@ class TwitterAccount < ActiveRecord::Base
   has_many :tweets
 
   def fetch_tweets
-    last_tweet_id = tweets.maximum(:twitter_id).first
-    Tw.client.user_timeline(twitter_user_id, count: 200, exclude_replies: true, since_id: last_tweet_id)
+    options = {count: 200, exclude_replies: true}
+    if last_tweet_id = tweets.maximum(:twitter_id)
+      options.merge!(since_id: last_tweet_id)
+    end
+    Tw.client.user_timeline(twitter_user_id, options).each { |status| Tweet.add(status) }
   end
 
   def self.create_account(user_name)
