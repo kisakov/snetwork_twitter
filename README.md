@@ -15,10 +15,10 @@ Install it from GitHub.com:
 Run at localhost:5000
 
 ## requests
-get localhost:5000
-get localhost:5000/tweets.json?name=dhh
-get localhost:5000/tweets?name=dhh
-post localhost:5000/add_account - params: "twitter_account[name]" = "dhh"
+*  get localhost:5000
+*  get localhost:5000/tweets.json?name=dhh
+*  get localhost:5000/tweets?name=dhh
+*  post localhost:5000/add_account - params: "twitter_account[name]" = "dhh"
 
 ![Screenshot](https://raw.githubusercontent.com/kisakov/snetwork_twitter/master/1.png)
 ![Screenshot](https://raw.githubusercontent.com/kisakov/snetwork_twitter/master/2.png)
