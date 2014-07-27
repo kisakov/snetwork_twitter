@@ -1,4 +1,5 @@
-h3 #{image_tag @twitter_account.profile_image_url}Tweets for #{@twitter_account}
+h3 Tweets for #{@twitter_account}
+p = image_tag @twitter_account.profile_image_url
 p screen_name: #{@twitter_account.screen_name}
 p description: #{@twitter_account.description}
 p followers_count: #{@twitter_account.followers_count}
