@@ -17,14 +17,15 @@ gem 'slim-rails'
 
 group :development, :test do
   gem 'pry-rails'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'database_cleaner'
 end
 
 group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
   gem 'vcr'
   gem 'webmock'
+  gem 'faker'
 end
 
 
