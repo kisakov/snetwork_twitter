@@ -12,6 +12,7 @@ gem 'twitter'
 gem 'sidekiq'
 gem 'sidetiq'
 gem 'logger'
+gem 'foreman'
 
 group :development do
   gem 'pry-rails'
