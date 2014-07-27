@@ -1,4 +1,10 @@
-h3 Tweets for #{@twitter_account}
+h3 #{image_tag @twitter_account.profile_image_url}Tweets for #{@twitter_account}
+p screen_name: #{@twitter_account.screen_name}
+p description: #{@twitter_account.description}
+p followers_count: #{@twitter_account.followers_count}
+p friends_count: #{@twitter_account.friends_count}
+p statuses_count: #{@twitter_account.statuses_count}
+p url: #{link_to @twitter_account.url}
 
 - if @twitter_account
   table
