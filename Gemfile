@@ -9,7 +9,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'twitter'
-gem 'tweetstream'
+gem 'sidekiq'
+gem 'sidetiq'
 gem 'logger'
 
 group :development do
